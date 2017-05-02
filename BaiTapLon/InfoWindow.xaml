@@ -1,0 +1,20 @@
+﻿<Window x:Class="BaiTapLon.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaiTapLon"
+        mc:Ignorable="d" Height="300" Width="500" Background="#0d0d0d"
+        Title="InfoWindow">
+    <Grid>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="Thông tin"
+                   FontSize="30" Foreground="White"></TextBlock>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="Thông tin"
+                   FontSize="20" Foreground="White" Margin="30 50 0 0"
+                   x:Name="txtInfo"></TextBlock>
+        <Button x:Name="btnGiaiThich" Click="btnGiaiThich_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Margin="0 0 20 20" Height="35" Width="100" Foreground="White" Background="Purple">
+            <Button.Content>Giải thích</Button.Content>
+        </Button>
+    </Grid>
+</Window>

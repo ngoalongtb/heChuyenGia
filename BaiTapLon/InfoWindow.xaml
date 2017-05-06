@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaiTapLon"
-        mc:Ignorable="d" Height="300" Width="500" Background="#0d0d0d"
+        mc:Ignorable="d" Height="500" Width="500" Background="#0d0d0d"
         Title="InfoWindow">
     <Grid>
         <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="Thông tin"

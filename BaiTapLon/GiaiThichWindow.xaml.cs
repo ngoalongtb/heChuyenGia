@@ -33,18 +33,30 @@ namespace BaiTapLon
             txtLuat.Text = strLuat;
 
             string strOptions = Global.GAnswer;
-
-            foreach (string  item in strOptions.Split(','))
+            if (strOptions == "")
             {
-                string query = string.Format("option(_,{0},X)",item);
-                string strOption = Prolog.Instance.GetQuestion(query);
-
                 TextBlock tbl = new TextBlock();
                 tbl.Foreground = Brushes.Aquamarine;
                 tbl.FontSize = 20;
-                tbl.Text = item+" - "+strOption;
+                tbl.Text = "Bạn không chọn lựa chọn nào";
                 stpl.Children.Add(tbl);
             }
+            else
+            {
+                foreach (string item in strOptions.Split(','))
+                {
+                    string query = string.Format("option(_,{0},X)", item);
+                    string strOption = Prolog.Instance.GetQuestion(query);
+
+                    TextBlock tbl = new TextBlock();
+                    tbl.Foreground = Brushes.Aquamarine;
+                    tbl.FontSize = 20;
+                    tbl.Text = item + " - " + strOption;
+                    stpl.Children.Add(tbl);
+                }
+            }
+
+            
 
 
 

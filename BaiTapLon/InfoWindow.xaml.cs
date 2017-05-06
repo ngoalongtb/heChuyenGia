@@ -29,7 +29,7 @@ namespace BaiTapLon
             InitializeComponent();
             this.language = language;
 
-            string query = string.Format("info(['{0}'],X).", language);
+            string query = string.Format("info('{0}',X).", language);
             string strInfo = Prolog.Instance.GetQuestion(query);
             txtInfo.Text = strInfo;
         }

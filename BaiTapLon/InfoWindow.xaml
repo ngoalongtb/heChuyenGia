@@ -11,7 +11,7 @@
                    FontSize="30" Foreground="White"></TextBlock>
         <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="Thông tin"
                    FontSize="20" Foreground="White" Margin="30 50 0 0"
-                   x:Name="txtInfo"></TextBlock>
+                   x:Name="txtInfo" TextWrapping="Wrap"></TextBlock>
         <Button x:Name="btnGiaiThich" Click="btnGiaiThich_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right"
                 Margin="0 0 20 20" Height="35" Width="100" Foreground="White" Background="Purple">
             <Button.Content>Giải thích</Button.Content>

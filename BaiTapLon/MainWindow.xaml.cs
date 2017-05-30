@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BaiTapLon.classes;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,15 +26,22 @@ namespace BaiTapLon
         {
             InitializeComponent();
             Load();
+
         }
+
         public void Load()
         {
             UCRightExpert uc = new UCRightExpert();
             grdRight.Children.Add(uc);
             uc.OnLoadLeft += Uc_OnLoadLeft;
-
             grdLeft.Children.Add(new UCLeftInfo());
+
+            this.DataContext = Global.theme;
+
         }
+        
+
+        
         #region sự kiện click trên top
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
@@ -52,6 +61,8 @@ namespace BaiTapLon
         private int x;
         private int y;
         private bool isMouseDown = false;
+
+        
         private void grdTop_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point p = Mouse.GetPosition(grdTop);
@@ -78,9 +89,9 @@ namespace BaiTapLon
 
         private void ResetDefaultNav()
         {
-            tblExpert.Foreground = Brushes.Gray;
-            tblStart.Foreground = Brushes.Gray;
-            tblTheme.Foreground = Brushes.Gray;
+            Global.theme.ForegroundExpert = Brushes.Gray;
+            Global.theme.ForegroundStart = Brushes.Gray;
+            Global.theme.ForegroundTheme = Brushes.Gray;
 
             tblExpert.FontSize = 30;
             tblStart.FontSize = 30;
@@ -91,9 +102,8 @@ namespace BaiTapLon
         {
             grdRight.Children.Clear();
             ResetDefaultNav();
-            tblExpert.Foreground = Brushes.White;
             tblExpert.FontSize = 35;
-
+            Global.theme.ForegroundExpert = Global.theme.ForegroundActive;
             UCRightExpert uc = new UCRightExpert();
             grdRight.Children.Add(uc);
             uc.OnLoadLeft += Uc_OnLoadLeft;
@@ -117,8 +127,8 @@ namespace BaiTapLon
 
             grdRight.Children.Clear();
             ResetDefaultNav();
-            tblStart.Foreground = Brushes.White;
             tblStart.FontSize = 35;
+            Global.theme.ForegroundStart = Global.theme.ForegroundActive;
 
             grdRight.Children.Add(new UCRightStart());
         }
@@ -127,8 +137,8 @@ namespace BaiTapLon
         {
             grdRight.Children.Clear();
             ResetDefaultNav();
-            tblTheme.Foreground = Brushes.White;
             tblTheme.FontSize = 35;
+            Global.theme.ForegroundTheme = Global.theme.ForegroundActive;
 
             grdRight.Children.Add(new UCRightTheme());
         }

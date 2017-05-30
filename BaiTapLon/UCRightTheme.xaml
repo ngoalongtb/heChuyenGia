@@ -8,9 +8,15 @@
              d:DesignHeight="494" d:DesignWidth="564">
     <Grid>
         <TextBlock Text="Thay đổi giao diện" VerticalAlignment="top" HorizontalAlignment="Left" Foreground="White" FontSize="30" Margin="36 10 0 0"></TextBlock>
-        <StackPanel x:Name="stpl" 
+        <WrapPanel x:Name="stpl" 
                      Margin="50 120 50 50">
-        </StackPanel>
+            <Button Width="100" Height="150" FontSize="30" x:Name="btnDark" Click="btnDark_Click">
+                Dark
+            </Button>
+            <Button Width="100" Height="150" FontSize="30" x:Name="btnLight" Click="btnLight_Click">
+                Light
+            </Button>
+        </WrapPanel>
         
     </Grid>
 </UserControl>

@@ -2,10 +2,11 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="BaiTapLon.MainWindow"
-        Title="MainWindow" Height="670" Width="1000" Background="#0d0d0d"
+        Title="MainWindow" Height="670" Width="1000" Background="{Binding BackgroundColor}"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen"
         x:Name="window"
         >
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -19,7 +20,7 @@
         
         <Grid Grid.Row="0" Grid.ColumnSpan="2" 
 			x:Name="grdTop" MouseDown="grdTop_MouseDown"
-			MouseUp="grdTop_MouseUp" MouseMove="grdTop_MouseMove" Background="#FF0D0D0D">
+			MouseUp="grdTop_MouseUp" MouseMove="grdTop_MouseMove" Background="{Binding BackgroundColor}">
             <Button Margin="0 30 120 0" VerticalAlignment="Top" HorizontalAlignment="Right"
 				Width="25" Height="25" x:Name="btnMinimum"
 				Click="btnMinimum_Click"
@@ -56,9 +57,9 @@
             </Button>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
-            <TextBlock x:Name="tblExpert" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Foreground="White" FontSize="35" Margin="0,0,0,10" MouseDown="tblExpert_MouseDown">Expert</TextBlock>
-            <TextBlock x:Name="tblStart" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Foreground="Gray" FontSize="30" Margin="150,0,0,10" MouseDown="tblStart_MouseDown">Start</TextBlock>
-            <TextBlock x:Name="tblTheme" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Foreground="Gray" FontSize="30" Margin="282,0,0,10" MouseDown="tblTheme_MouseDown">Theme</TextBlock>
+            <TextBlock x:Name="tblExpert" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Foreground="{Binding ForegroundExpert}" FontSize="35" Margin="0,0,0,10" MouseDown="tblExpert_MouseDown">Expert</TextBlock>
+            <TextBlock x:Name="tblStart" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Foreground="{Binding ForegroundStart}" FontSize="30" Margin="150,0,0,10" MouseDown="tblStart_MouseDown">Start</TextBlock>
+            <TextBlock x:Name="tblTheme" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Foreground="{Binding ForegroundTheme}" FontSize="30" Margin="282,0,0,10" MouseDown="tblTheme_MouseDown">Theme</TextBlock>
         </Grid>
         <Grid x:Name="grdLeft" Grid.Column="0" Margin="60 0 20 0" Grid.Row="2" Width="320" Height="500"
                VerticalAlignment="Top" HorizontalAlignment="Left"

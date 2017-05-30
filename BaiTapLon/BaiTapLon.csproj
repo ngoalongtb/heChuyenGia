@@ -65,6 +65,7 @@
     <Compile Include="classes\Expert.cs" />
     <Compile Include="classes\Global.cs" />
     <Compile Include="classes\Prolog.cs" />
+    <Compile Include="classes\Theme.cs" />
     <Compile Include="GiaiThichWindow.xaml.cs">
       <DependentUpon>GiaiThichWindow.xaml</DependentUpon>
     </Compile>

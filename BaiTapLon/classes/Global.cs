@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaiTapLon.classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace BaiTapLon
         public static Expert GExpert = null;
         public static int GViTriCau = 1;
         public static string GAnswer = "";
+        public static Theme theme = new Theme();
 
         public static void Reset()
         {
